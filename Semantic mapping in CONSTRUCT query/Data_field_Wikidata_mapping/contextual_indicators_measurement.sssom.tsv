@@ -1,0 +1,36 @@
+# sssom_version: 1.1
+# mapping_set_id: urn:uuid:93d67859-dd5a-586d-94c5-58a09e291a83
+# mapping_set_title: Semantic mappings of measurement concepts in contextual indicators to Wikidata
+# mapping_set_description: Manually curated mappings from measurement concepts used in contextual indicators and derived calculations to Wikidata entities used as codings in the FHIR RDF representation.
+# mapping_set_version: 2026-10-04
+# license: https://creativecommons.org/licenses/by/4.0/
+# object_source: https://www.wikidata.org/
+# curie_map:
+#   ex: http://example.org/ontology#
+#   orcid: https://orcid.org/
+#   owl: http://www.w3.org/2002/07/owl#
+#   rdfs: http://www.w3.org/2000/01/rdf-schema#
+#   semapv: https://w3id.org/semapv/vocab/
+#   skos: http://www.w3.org/2004/02/skos/core#
+#   wikidata: https://www.wikidata.org/entity/
+record_id	subject_id	subject_label	mapping_cardinality	subject_type	subject_source	predicate_id	object_id	object_label	mapping_justification	curation_rule_text	author_id	reviewer_id	creator_id	mapping_date	review_date	publication_date	confidence	comment
+urn:uuid:08ce59a9-e7a3-5540-84b1-c6ef108eb9ca		weather	1:1	rdfs:Literal	https://dataplatform.knmi.nl/dataset/	skos:exactMatch	wikidata:Q11663	weather	semapv:ManualMappingCuration		orcid:0009-0007-4874-7831			2026-10-04			1.0	FHIR Observation.code as CodeableConcept (weather)
+urn:uuid:1aa02315-cca3-5df8-97e9-d000a0dde71c		temperature	1:1	rdfs:Literal	https://dataplatform.knmi.nl/dataset/	skos:broadMatch	wikidata:Q11466	temperature	semapv:ManualMappingCuration		orcid:0009-0007-4874-7831			2026-10-04			1.0	FHIR Observation.component.code as CodeableConcept . In our data sources, weather observations (e.g., temperature) refer to measurements for a specific time point or time period, whereas the mapped Wikidata concepts represent the corresponding weather variables independently of any specific temporal context.
+urn:uuid:a3b5e92c-0439-5dbc-ac53-6d5ecb6d4bcf		precipitation	1:1	rdfs:Literal	https://dataplatform.knmi.nl/dataset/	skos:broadMatch	wikidata:Q25257	precipitation	semapv:ManualMappingCuration		orcid:0009-0007-4874-7831			2026-10-04			1.0	
+urn:uuid:25b5732e-51ea-56e2-bfbf-9e86c4cb9590		wind speed	1:1	rdfs:Literal	https://dataplatform.knmi.nl/dataset/	skos:broadMatch	wikidata:Q1464943	wind speed	semapv:ManualMappingCuration		orcid:0009-0007-4874-7831			2026-10-04			1.0	
+urn:uuid:491ccd36-e8c5-5f16-8357-38cc26918455		humidity	1:1	rdfs:Literal	https://dataplatform.knmi.nl/dataset/	skos:broadMatch	wikidata:Q180600	humidity	semapv:ManualMappingCuration		orcid:0009-0007-4874-7831			2026-10-04			1.0	
+urn:uuid:7c865d00-578f-5234-8970-b628368becf7		Normalized Difference Vegetation Index	1:1	rdfs:Literal	https://data.rivm.nl/meta/srv/eng/catalog.search#/metadata/6c59f7e9-97ac-4a43-af92-1bdd595d69d4	skos:exactMatch	wikidata:Q718775	Normalized Difference Vegetation Index	semapv:ManualMappingCuration		orcid:0009-0007-4874-7831			2026-10-04			1.0	FHIR Observation.code as CodeableConcept.
+urn:uuid:ec52cd1a-acb5-5394-a423-66636a8267fe		diversity		rdfs:Literal		skos:closeMatch	wikidata:Q36793538	diversity	semapv:ManualMappingCuration		orcid:0009-0007-4874-7831			2026-10-04			1.0	FHIR Observation.code as CodeableConcept.
+urn:uuid:d33e744a-b8e3-5f06-b424-f5bd560e0488		accessibility		rdfs:Literal		skos:exactMatch	wikidata:Q555097	accessibility	semapv:ManualMappingCuration		orcid:0009-0007-4874-7831			2026-10-04			1.0	FHIR Observation.code as CodeableConcept.
+urn:uuid:163ad095-8af8-5524-9368-f00cd42d0624		travel distance		rdfs:Literal		skos:exactMatch	wikidata:Q132646548	travel distance	semapv:ManualMappingCuration		orcid:0009-0007-4874-7831			2026-10-04			1.0	FHIR Observation.code as CodeableConcept.
+urn:uuid:64f8bff1-3275-5229-8909-98585c7eba52		distance		rdfs:Literal		skos:exactMatch	wikidata:Q126017	distance	semapv:ManualMappingCuration		orcid:0009-0007-4874-7831			2026-10-04			1.0	FHIR Observation.code as CodeableConcept.
+urn:uuid:bb37cb66-f335-5105-b55e-7a31da4412ff		number		rdfs:Literal		skos:exactMatch	wikidata:Q11563	number	semapv:ManualMappingCuration		orcid:0009-0007-4874-7831			2026-10-04			1.0	FHIR Observation.code as CodeableConcept.
+urn:uuid:dc805856-1eb5-5f9c-9a5d-30c6caa94fb5		ratio of areas	1:1	rdfs:Literal		skos:exactMatch	wikidata:Q121978770	ratio of areas	semapv:ManualMappingCuration		orcid:0009-0007-4874-7831			2026-10-04			1.0	FHIR Observation.code as CodeableConcept .
+urn:uuid:c7687dfd-99b6-5e44-af43-c0b92bf02458		safety	1:1	rdfs:Literal		skos:exactMatch	wikidata:Q10566551	safety	semapv:ManualMappingCuration		orcid:0009-0007-4874-7831			2026-10-04			1.0	FHIR Observation.code as CodeableConcept.
+urn:uuid:6df7de37-e577-5452-81ef-482ea02737bc		safety crime	1:1	rdfs:Literal	https://data.politie.nl/portal.html?_la=nl&_catalog=Politie&tableId=47022NED&_theme=141	skos:exactMatch	wikidata:Q136735772	safety crime	semapv:ManualMappingCuration		orcid:0009-0007-4874-7831			2026-10-04			1.0	FHIR Observation.code as CodeableConcept.
+urn:uuid:f8b4b204-a1d0-5f71-a4b0-678352c4fb6d		traffic safety	1:1	rdfs:Literal	https://verkeersveiligheid.ndw.nu/dataset/bestand-geregistreerde-ongevallen-in-nederland-bron	skos:broadMatch	wikidata:Q2399986	transport safety	semapv:ManualMappingCuration		orcid:0009-0007-4874-7831			2026-10-04			1.0	FHIR Observation.code as CodeableConcept.Traffic safety is derived from aggregated road traffic incidents in our data sources, while the mapped Wikidata concept has a broader scope covering safety across multiple transport modes, including road, rail, and air transport.
+urn:uuid:83ab08b0-515f-5ba5-9f14-990d7becc9d3	https://wiki.openstreetmap.org/wiki/Key:width	width	1:1	skos:Concept	https://www.openstreetmap.org/	skos:exactMatch	wikidata:Q35059	width	semapv:ManualMappingCuration		orcid:0009-0007-4874-7831			2026-10-04			1.0	FHIR Observation.code as CodeableConcept.
+urn:uuid:d2d81c1f-bd0a-58fa-92ac-39adc3228bcb		mean	1:1	rdfs:Literal		skos:exactMatch	wikidata:Q2796622	mean	semapv:ManualMappingCuration		orcid:0009-0007-4874-7831			2026-10-04			1.0	FHIR Observation.code as CodeableConcept.
+urn:uuid:e8e02018-4447-5233-900c-3ba596007d45		standard deviation	1:1	rdfs:Literal		skos:exactMatch	wikidata:Q159375	standard deviation	semapv:ManualMappingCuration		orcid:0009-0007-4874-7831			2026-10-04			1.0	FHIR Observation.code as CodeableConcept.
+urn:uuid:5735f4fe-7e45-5b90-9dbd-83a1ae28b5ba		minimum	1:1	rdfs:Literal		skos:exactMatch	wikidata:Q10585806	minimum	semapv:ManualMappingCuration		orcid:0009-0007-4874-7831			2026-10-04			1.0	FHIR Observation.code as CodeableConcept.
+urn:uuid:c3eb8023-790f-5496-bf91-6e75bc702cfc		maximum	1:1	rdfs:Literal		skos:exactMatch	wikidata:Q10578722	maximum	semapv:ManualMappingCuration		orcid:0009-0007-4874-7831			2026-10-04			1.0	FHIR Observation.code as CodeableConcept.
