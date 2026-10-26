@@ -1,0 +1,16 @@
+[PrefixDeclaration]
+:      http://example.org/
+ex:    http://example.org/ontology#
+geo:   http://www.opengis.net/ont/geosparql#
+rdfs:  http://www.w3.org/2000/01/rdf-schema#
+xsd:   http://www.w3.org/2001/XMLSchema#
+fhir:  http://hl7.org/fhir/
+time:  http://www.w3.org/2006/time#
+
+[MappingDeclaration] @collection [[
+
+mappingId rivm_ndvi_raster
+target :observation/NDVIRaster/{id}/{time} a ex:observation ; ex:code "Normalized Difference Vegetation Index" ; ex:facilityType "vegetation"^^xsd:string ; rdfs:label "Normalized Difference Vegetation Index"^^xsd:string ; ex:neighbourhood :grid/{id}/{time} ; ex:value "{value}"^^xsd:float ; time:inXSDgYear "{time}"^^xsd:gYear . :grid/{id} a ex:grid, geo:Feature ; ex:ID "{id}"^^xsd:string . :grid/{id}/{time} a ex:gridVersion, geo:Feature ; ex:versionOf :grid/{id} ; geo:hasGeometry :geometry/grid/{id}/{time} ; time:inXSDgYear "{time}"^^xsd:gYear . :geometry/grid/{id}/{time} a geo:Geometry ; geo:asWKT "{geometry}"^^geo:wktLiteral .
+source SELECT ROW_NUMBER() OVER () AS id, CAST(value AS DOUBLE PRECISION) AS value, geometry, '2022' AS time FROM ndvi_raster
+
+]]

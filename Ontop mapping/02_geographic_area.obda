@@ -1,0 +1,25 @@
+[PrefixDeclaration]
+:       http://example.org/
+ex:     http://example.org/ontology#
+geo:    http://www.opengis.net/ont/geosparql#
+rdfs:   http://www.w3.org/2000/01/rdf-schema#
+xsd:    http://www.w3.org/2001/XMLSchema#
+fhir:   http://hl7.org/fhir/
+time:   http://www.w3.org/2006/time#
+
+[MappingDeclaration] @collection [[
+
+mappingId postcode4_mapping
+target :postalCodeArea/{postcode} a ex:postalCodeArea, geo:Feature ; ex:postalCode "{postcode}"^^xsd:string . :postalCodeArea/{postcode}/{time} a ex:postalCodeAreaVersion, geo:Feature ; ex:versionOf :postalCodeArea/{postcode} ; geo:hasGeometry :postalCodeArea/{postcode}/geometry/{time} ; time:inXSDDate "{time}"^^xsd:date . :postalCodeArea/{postcode}/geometry/{time} a geo:Geometry ; geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/28992> {geometry}"^^geo:wktLiteral ; time:inXSDDate "{time}"^^xsd:date .
+source SELECT postcode, geometry, CAST('2025-10-16' AS DATE) AS time FROM postcode4_data_not_wgs84
+
+mappingId buurten_2024_2026_mapping
+target :neighbourhoodUnit/{buurtcode} a ex:neighbourhoodUnit, geo:Feature ; ex:ID "{buurtcode}"^^xsd:string ; ex:name "{buurtnaam}"^^xsd:string . :neighbourhoodUnit/{buurtcode}/{jaar} a ex:neighbourhoodUnitVersion, geo:Feature ; ex:versionOf :neighbourhoodUnit/{buurtcode} ; geo:hasGeometry :neighbourhoodUnit/{buurtcode}/geometry/{jaar} ; geo:sfWithin :district/{wijkcode}/{jaar} ; time:inXSDgYear "{jaar}"^^xsd:gYear . :neighbourhoodUnit/{buurtcode}/geometry/{jaar} a geo:Geometry ; geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/28992> {geometry}"^^geo:wktLiteral ; time:inXSDgYear "{jaar}"^^xsd:gYear . :district/{wijkcode} a ex:district, geo:Feature ; ex:ID "{wijkcode}"^^xsd:string . :district/{wijkcode}/{jaar} a ex:districtVersion, geo:Feature ; ex:versionOf :district/{wijkcode} ; geo:sfWithin :municipality/{gemeentecode}/{jaar} ; time:inXSDgYear "{jaar}"^^xsd:gYear . :municipality/{gemeentecode} a ex:municipality, geo:Feature ; ex:ID "{gemeentecode}"^^xsd:string ; ex:name "{gemeentenaam}"^^xsd:string . :municipality/{gemeentecode}/{jaar} a ex:municipalityVersion, geo:Feature ; ex:versionOf :municipality/{gemeentecode} ; time:inXSDgYear "{jaar}"^^xsd:gYear .
+source SELECT jaar, buurtcode, buurtnaam, wijkcode, gemeentecode, gemeentenaam, geometry FROM buurten_2024 UNION ALL SELECT jaar, buurtcode, buurtnaam, wijkcode, gemeentecode, gemeentenaam, geometry FROM buurten_2026
+
+mappingId wijken_2024_2026_mapping
+target :district/{wijkcode} a ex:district, geo:Feature ; ex:ID "{wijkcode}"^^xsd:string ; ex:name "{wijknaam}"^^xsd:string . :district/{wijkcode}/{jaar} a ex:districtVersion, geo:Feature ; ex:versionOf :district/{wijkcode} ; geo:hasGeometry :district/{wijkcode}/geometry/{jaar} ; geo:sfWithin :municipality/{gemeentecode}/{jaar} ; time:inXSDgYear "{jaar}"^^xsd:gYear . :district/{wijkcode}/geometry/{jaar} a geo:Geometry ; geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/28992> {geometry}"^^geo:wktLiteral ; time:inXSDgYear "{jaar}"^^xsd:gYear . :municipality/{gemeentecode} a ex:municipality, geo:Feature ; ex:ID "{gemeentecode}"^^xsd:string ; ex:name "{gemeentenaam}"^^xsd:string . :municipality/{gemeentecode}/{jaar} a ex:municipalityVersion, geo:Feature ; ex:versionOf :municipality/{gemeentecode} ; time:inXSDgYear "{jaar}"^^xsd:gYear .
+source SELECT jaar, wijknaam, wijkcode, gemeentecode, gemeentenaam, geometry FROM wijken_2024 UNION ALL SELECT jaar, wijknaam, wijkcode, gemeentecode, gemeentenaam, geometry FROM wijken_2026
+
+
+]]
