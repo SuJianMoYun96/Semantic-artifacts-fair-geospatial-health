@@ -1,0 +1,48 @@
+PREFIX ex: <http://example.org/ontology#>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
+PREFIX uom: <http://www.opengis.net/def/uom/OGC/1.0/>
+PREFIX osmkey: <https://www.openstreetmap.org/wiki/Key:>
+
+SELECT
+  ?postalCode ?zipcode_start ?zipcode_start_wkt
+  ?buffer
+  ?stationName ?typeOfStation ?trainStationWKT ?dist
+WHERE {
+    SERVICE <https://qlever.dev/api/osm-planet> {{
+      SELECT ?postalCode (SAMPLE(?postalWKTCandidate) AS ?postalWKT)
+      WHERE {
+        # Postal codes of individual’s regularly visited locations as placeholders
+        VALUES ?postalCode {"1095XH" "1095MS"}
+        # Retrieve postal-code geometry and calculate centroid
+        ?postalAreaCandidate osmkey:addr:postcode ?postalCode;
+                             geo:hasGeometry/geo:asWKT ?postalWKTCandidate.
+        FILTER(BOUND(?postalWKTCandidate))
+        FILTER(STRLEN(STR(?postalWKTCandidate)) > 0)
+        FILTER(!CONTAINS(LCASE(STR(?postalWKTCandidate)), "empty"))
+        }
+      GROUP BY ?postalCode
+      }
+    BIND(geof:centroid(?postalWKT) AS ?zipcode_start)
+    }
+    BIND(STRDT(CONCAT( "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> ",
+        STR(?zipcode_start)),geo:wktLiteral) AS ?zipcode_start_wkt)
+
+    # An example of distance calculation
+    SERVICE <Ontop SPARQL endpoint> {
+      ?trainStation a ex:publicTransportStop, geo:Feature;
+                    ex:name ?stationName ;
+                    ex:typeOfStation "onstreetTram";
+                    ex:neighbourhood ?trainStationLocation.
+      ?trainStationLocation geo:hasGeometry/geo:asWKT ?trainStationWKT.
+    }
+  BIND(STRDT(STR(?trainStationWKT), geo:wktLiteral) AS ?trainStationWKT_local)
+  FILTER(BOUND(?trainStationWKT))
+  FILTER(STRLEN(STR(?trainStationWKT)) > 0)
+  FILTER(!CONTAINS(LCASE(STR(?trainStationWKT)), "nan"))
+  FILTER(!CONTAINS(LCASE(STR(?trainStationWKT)), "empty"))
+  BIND(geof:distance( ?zipcode_start_wkt, ?trainStationWKT_local, uom:metre)
+       AS ?dist)
+  FILTER(?dist<500)
+}
+ORDER BY ?postalCode ?dist
