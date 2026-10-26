@@ -1,0 +1,23 @@
+#This query tests `geof:relate` when used inside a `FILTER`.
+
+PREFIX geo:  <http://www.opengis.net/ont/geosparql#>
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
+
+SELECT ?geometryA ?geometryB
+WHERE {
+  VALUES ?geometryA {
+    "POINT(1 1)"^^geo:wktLiteral
+  }
+
+  VALUES ?geometryB {
+    "POINT(1 1)"^^geo:wktLiteral
+  }
+
+  FILTER(
+    geof:relate(
+      ?geometryA,
+      ?geometryB,
+      "T********"
+    )
+  )
+}

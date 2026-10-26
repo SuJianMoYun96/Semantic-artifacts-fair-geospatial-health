@@ -1,0 +1,18 @@
+PREFIX geo:  <http://www.opengis.net/ont/geosparql#>
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
+
+SELECT
+  ?polygon
+  ?centroid
+  (BOUND(?centroid) AS ?functionReturnedValue)
+WHERE {
+  BIND(
+    "POLYGON((0 0, 0 2, 2 2, 2 0, 0 0))"^^geo:wktLiteral
+    AS ?polygon
+  )
+
+  BIND(
+    geof:centroid(?polygon)
+    AS ?centroid
+  )
+}

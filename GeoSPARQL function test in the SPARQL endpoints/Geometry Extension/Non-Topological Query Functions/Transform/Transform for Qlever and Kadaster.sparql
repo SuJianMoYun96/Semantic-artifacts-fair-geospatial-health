@@ -1,0 +1,18 @@
+# QLever: 2026-07-24 21:07
+# Kadaster: : 2026-07-24 20:11
+
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
+
+SELECT ?wkt4326 ?wkt28992
+WHERE {
+  BIND("POINT(4.9041 52.3676)"^^geo:wktLiteral AS ?wkt4326)
+
+  BIND(
+    geof:transform(
+      ?wkt4326,
+      <http://www.opengis.net/def/crs/EPSG/0/28992>
+    )
+    AS ?wkt28992
+  )
+}
