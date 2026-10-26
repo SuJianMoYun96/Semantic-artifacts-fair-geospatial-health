@@ -1,0 +1,69 @@
+# SPARQL endpoint: https://data.kkg.kadaster.nl/sparql/
+# Query time: 2026-10-02 10:18
+
+PREFIX geo:  <http://www.opengis.net/ont/geosparql#>
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
+
+SELECT
+  ?metres
+  ?kilometres
+  ?miles
+  ?feet
+  ?yards
+  ?radians
+  ?degrees
+  ?unity
+  ?grid_spacing
+WHERE {
+  BIND(
+    "POINT(7.8412948 47.9977308)"^^geo:wktLiteral
+    AS ?p1
+  )
+
+  BIND(
+    "POINT(7.8450491 47.9946000)"^^geo:wktLiteral
+    AS ?p2
+  )
+
+  BIND(
+    geof:distance(
+      ?p1,
+      ?p2,
+      <http://www.opengis.net/def/uom/OGC/1.0/metre>
+    )
+    AS ?metres
+  )
+
+
+
+
+    BIND(
+    geof:distance(
+      ?p1,
+      ?p2,
+      <http://www.opengis.net/def/uom/OGC/1.0/degree>
+    )
+    AS ?degrees
+  )
+
+
+
+
+
+
+
+  BIND(
+    geof:distance(
+      ?p1,
+      ?p2,
+      <http://www.opengis.net/def/uom/OGC/1.0/radian>
+    )
+    AS ?radians
+  )
+
+
+
+
+
+
+}

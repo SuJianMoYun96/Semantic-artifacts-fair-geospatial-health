@@ -1,0 +1,19 @@
+# Test geof:area
+
+PREFIX geo:  <http://www.opengis.net/ont/geosparql#>
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
+
+SELECT
+  ?geometry
+  ?area
+  (BOUND(?area) AS ?functionReturnedValue)
+WHERE {
+  VALUES ?geometry {
+    "POLYGON((0 0, 0 2, 2 2, 2 0, 0 0))"^^geo:wktLiteral
+  }
+
+  BIND(
+    geof:area(?geometry)
+    AS ?area
+  )
+}
