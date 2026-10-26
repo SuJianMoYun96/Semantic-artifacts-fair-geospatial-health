@@ -1,0 +1,161 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ex: <http://example.org/>
+PREFIX : <http://weso.es/shapes/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX graph: <https://biodatafuse.org/example/>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX ex-onto: <http://example.org/ontology#>
+PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX shexer: <http://weso.es/shexer/ontology/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+:postalCodeArea
+{
+   rdf:type  [ex-onto:postalCodeArea]  ;                       # 100.0 %
+   rdf:type  [geosparql:Feature]  ;                            # 100.0 %
+   ex-onto:postalCode  xsd:string                              # 100.0 %
+            // rdfs:comment "8742" ;
+} // shexer:conformant_example <http://example.org/postalCodeArea/8742>
+
+
+:Feature
+{
+   rdf:type  [geosparql:Feature]  ;                            # 100.0 %
+   geosparql:hasGeometry  @:Geometry  ?
+            // rdfs:comment <http://example.org/postalCodeArea/8742/geometry/2025-10-16> ;
+            # 59.671116073694364 % obj: @:Geometry. Cardinality: {1}
+   ex-onto:versionOf  @:Feature  OR  @:district  OR  @:postalCodeArea  OR  @:municipality  ?
+            // rdfs:comment <http://example.org/postalCodeArea/8742> ;
+            # 59.671116073694364 % with cardinality {1}
+            # 59.671116073694364 % obj: @:Feature. Cardinality: {1}
+            # 35.52758463178196 % obj: @:district. Cardinality: {1}
+            # 20.661828147997767 % obj: @:postalCodeArea. Cardinality: {1}
+            # 3.481703293914632 % obj: @:municipality. Cardinality: {1}
+   time:inXSDgYear  xsd:gYear  ?
+            // rdfs:comment "2024" ;
+            # 39.0092879256966 % obj: xsd:gYear. Cardinality: {1}
+   rdf:type  [ex-onto:districtVersion]  ?;
+            # 35.52758463178196 % obj: ex-onto:districtVersion. Cardinality: {1}
+   geosparql:sfWithin  @:Feature  OR  @:municipalityVersion  ?
+            // rdfs:comment <http://example.org/municipality/GM0363/2024> ;
+            # 35.52758463178196 % with cardinality {1}
+            # 35.52758463178196 % obj: @:Feature. Cardinality: {1}
+            # 35.52758463178196 % obj: @:municipalityVersion. Cardinality: {1}
+   rdf:type  [ex-onto:postalCodeArea]  ?;
+            # 20.661828147997767 % obj: ex-onto:postalCodeArea. Cardinality: {1}
+   rdf:type  [ex-onto:postalCodeAreaVersion]  ?;
+            # 20.661828147997767 % obj: ex-onto:postalCodeAreaVersion. Cardinality: {1}
+   ex-onto:postalCode  xsd:string  ?
+            // rdfs:comment "8742" ;
+            # 20.661828147997767 % obj: xsd:string. Cardinality: {1}
+   time:inXSDDate  xsd:date  ?
+            // rdfs:comment "2025-10-16" ;
+            # 20.661828147997767 % obj: xsd:date. Cardinality: {1}
+   ex-onto:ID  xsd:string  ?
+            // rdfs:comment "GM1978" ;
+            # 19.66705577830787 % obj: xsd:string. Cardinality: {1}
+   ex-onto:name  xsd:string  *
+            // rdfs:comment "Wijk 51 Belfeld" ;
+            # 19.66705577830787 % obj: xsd:string. Cardinality: +
+            # 19.169669593462924 % obj: xsd:string. Cardinality: {1}
+            # 0.49738618484494745 % obj: xsd:string. Cardinality: {2}
+   rdf:type  [ex-onto:district]  ?;
+            # 17.926204131350556 % obj: ex-onto:district. Cardinality: {1}
+   rdf:type  [ex-onto:municipalityVersion]  ?;
+            # 3.481703293914632 % obj: ex-onto:municipalityVersion. Cardinality: {1}
+   rdf:type  [ex-onto:municipality]  ?
+            # 1.740851646957316 % obj: ex-onto:municipality. Cardinality: {1}
+} // shexer:conformant_example <http://example.org/postalCodeArea/8742>
+
+
+:postalCodeAreaVersion
+{
+   rdf:type  [geosparql:Feature]  ;                            # 100.0 %
+   rdf:type  [ex-onto:postalCodeAreaVersion]  ;                # 100.0 %
+   geosparql:hasGeometry  @:Geometry                          # 100.0 %
+            // rdfs:comment <http://example.org/postalCodeArea/8742/geometry/2025-10-16> ;
+   ex-onto:versionOf  @:postalCodeArea  OR  @:Feature
+            // rdfs:comment <http://example.org/postalCodeArea/8742> ;
+            # 100.0 % obj: @:postalCodeArea. Cardinality: {1}
+            # 100.0 % obj: @:Feature. Cardinality: {1}
+   time:inXSDDate  xsd:date                                    # 100.0 %
+            // rdfs:comment "2025-10-16" ;
+} // shexer:conformant_example <http://example.org/postalCodeArea/8742/2025-10-16>
+
+
+:district
+{
+   rdf:type  [geosparql:Feature]  ;                            # 100.0 %
+   rdf:type  [ex-onto:district]  ;                             # 100.0 %
+   ex-onto:ID  xsd:string                                     # 100.0 %
+            // rdfs:comment "WK098832" ;
+   ex-onto:name  xsd:string  +                                 # 100.0 %
+            // rdfs:comment "Wijk 51 Belfeld" ;
+            # 97.22536806342016 % obj: xsd:string. Cardinality: {1}
+            # 2.7746319365798415 % obj: xsd:string. Cardinality: {2}
+} // shexer:conformant_example <http://example.org/district/WK170808>
+
+
+:districtVersion
+{
+   geosparql:sfWithin  @:Feature  OR  @:municipalityVersion
+            // rdfs:comment <http://example.org/municipality/GM0363/2024> ;
+            # 100.0 % obj: @:Feature. Cardinality: {1}
+            # 100.0 % obj: @:municipalityVersion. Cardinality: {1}
+   rdf:type  [geosparql:Feature]  ;                            # 100.0 %
+   rdf:type  [ex-onto:districtVersion]  ;                      # 100.0 %
+   geosparql:hasGeometry  @:Geometry                          # 100.0 %
+            // rdfs:comment <http://example.org/district/WK169903/geometry/2024> ;
+   time:inXSDgYear  xsd:gYear                                 # 100.0 %
+            // rdfs:comment "2024" ;
+   ex-onto:versionOf  @:Feature  OR  @:district
+            // rdfs:comment <http://example.org/district/WK169903> ;
+            # 100.0 % obj: @:Feature. Cardinality: {1}
+            # 100.0 % obj: @:district. Cardinality: {1}
+} // shexer:conformant_example <http://example.org/district/WK194035/2026>
+
+
+:municipality
+{
+   rdf:type  [geosparql:Feature]  ;                            # 100.0 %
+   rdf:type  [ex-onto:municipality]  ;                         # 100.0 %
+   ex-onto:ID  xsd:string                                     # 100.0 %
+            // rdfs:comment "GM1978" ;
+   ex-onto:name  xsd:string                                    # 100.0 %
+            // rdfs:comment "Westerveld" ;
+} // shexer:conformant_example <http://example.org/municipality/GM0632>
+
+
+:municipalityVersion
+{
+   rdf:type  [geosparql:Feature]  ;                            # 100.0 %
+   rdf:type  [ex-onto:municipalityVersion]  ;                  # 100.0 %
+   geosparql:hasGeometry  @:Geometry                          # 100.0 %
+            // rdfs:comment <http://example.org/municipality/GM0882/geometry/2026> ;
+   time:inXSDgYear  xsd:gYear                                 # 100.0 %
+            // rdfs:comment "2026" ;
+   ex-onto:versionOf  @:Feature  OR  @:municipality
+            // rdfs:comment <http://example.org/municipality/GM1731> ;
+            # 100.0 % obj: @:Feature. Cardinality: {1}
+            # 100.0 % obj: @:municipality. Cardinality: {1}
+} // shexer:conformant_example <http://example.org/municipality/GM0882/2026>
+
+
+:Geometry
+{
+   geosparql:asWKT  geosparql:wktLiteral  +                   # 100.0 %
+            // rdfs:comment "<http://www.opengis.net/def/crs/EPSG/0/28992> MULTIPOLYGON (((204885.181 487724.433, 204900.7709 487705.9391, ..., 204872.0501 487736.6771, 204885.181 487724.433)))" ;
+            # 98.62209747384537 % obj: geosparql:wktLiteral. Cardinality: {1}
+            # 1.3779025261546312 % obj: geosparql:wktLiteral. Cardinality: {2}
+   rdf:type  [geosparql:Geometry]  ;                           # 100.0 %
+   time:inXSDgYear  xsd:gYear  ?
+            // rdfs:comment "2024" ;
+            # 65.37381985200305 % obj: xsd:gYear. Cardinality: {1}
+   time:inXSDDate  xsd:date  ?
+            // rdfs:comment "2025-10-16" ;
+            # 34.62618014799694 % obj: xsd:date. Cardinality: {1}
+} // shexer:conformant_example <http://example.org/postalCodeArea/8742/geometry/2025-10-16>
+
+

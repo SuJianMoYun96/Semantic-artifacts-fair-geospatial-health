@@ -1,0 +1,335 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ex: <http://example.org/>
+PREFIX : <http://weso.es/shapes/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX graph: <https://biodatafuse.org/example/>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX ex-onto: <http://example.org/ontology#>
+PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX shexer: <http://weso.es/shexer/ontology/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+:Feature
+{
+   rdf:type  [geosparql:Feature]  ;                            # 100.0 %
+   ex-onto:versionOf  @:Feature  OR  @:physicalLocation  OR  @:neighbourhoodUnit  OR  @:district  OR  @:municipality  ?
+            // rdfs:comment <http://example.org/location/trafficAccidentLocation/HTT06004024210328> ;
+            # 52.226587318747775 % with cardinality {1}
+            # 52.226587318747775 % obj: @:Feature. Cardinality: {1}
+            # 40.08522472115682 % obj: @:physicalLocation. Cardinality: {1}
+            # 9.662460872139633 % obj: @:neighbourhoodUnit. Cardinality: {1}
+            # 2.250039086279219 % obj: @:district. Cardinality: {1}
+            # 0.2288626391721027 % obj: @:municipality. Cardinality: {1}
+   geosparql:hasGeometry  @:Geometry  ?
+            // rdfs:comment <http://example.org/location/trafficAccidentLocation/HTT06004024210328/geometry/2025> ;
+            # 46.07357534670361 % obj: @:Geometry. Cardinality: {1}
+   time:inXSDgYear  xsd:gYear  ?
+            // rdfs:comment "2025" ;
+            # 42.852200640682334 % obj: xsd:gYear. Cardinality: {1}
+   rdf:type  [ex-onto:physicalLocation]  ?;
+            # 40.08522472115682 % obj: ex-onto:physicalLocation. Cardinality: {1}
+   rdf:type  [ex-onto:physicalLocationVersion]  ?;
+            # 40.08522472115682 % obj: ex-onto:physicalLocationVersion. Cardinality: {1}
+   rdf:type  [ex-onto:neighbourhoodUnitVersion]  ?;
+            # 9.662460872139633 % obj: ex-onto:neighbourhoodUnitVersion. Cardinality: {1}
+   time:inXSDDate  xsd:date  ?
+            // rdfs:comment "2026-06-09" ;
+            # 9.348772690832522 % obj: xsd:date. Cardinality: {1}
+   ex-onto:isLocatedInTown  xsd:string  ?
+            // rdfs:comment "Tilburg" ;
+            # 9.247647338640197 % obj: xsd:string. Cardinality: {1}
+   ex-onto:isLocatedInStreet  xsd:string  ?
+            // rdfs:comment "Lekdijk" ;
+            # 9.05936790001896 % obj: xsd:string. Cardinality: {1}
+   ex-onto:ID  xsd:string  ?
+            // rdfs:comment "06238" ;
+            # 7.688187960095403 % obj: xsd:string. Cardinality: {1}
+   ex-onto:name  xsd:string  ?
+            // rdfs:comment "Medemblik Parkwijk" ;
+            # 6.013964612779716 % obj: xsd:string. Cardinality: {1}
+   geosparql:sfWithin  @:Feature  OR  @:districtVersion  OR  @:municipalityVersion  ?
+            // rdfs:comment <http://example.org/municipality/GM0758/2022> ;
+            # 5.873586656775897 % with cardinality {1}
+            # 5.873586656775897 % obj: @:Feature. Cardinality: {1}
+            # 4.762538379399701 % obj: @:districtVersion. Cardinality: {1}
+            # 1.1110482773761963 % obj: @:municipalityVersion. Cardinality: {1}
+   rdf:type  [ex-onto:neighbourhoodUnit]  ?;
+            # 5.183672247411158 % obj: ex-onto:neighbourhoodUnit. Cardinality: {1}
+   rdf:type  [ex-onto:district]  ?;
+            # 2.250039086279219 % obj: ex-onto:district. Cardinality: {1}
+   rdf:type  [ex-onto:districtVersion]  ?;
+            # 2.250039086279219 % obj: ex-onto:districtVersion. Cardinality: {1}
+   rdf:type  [ex-onto:municipality]  ?;
+            # 0.2288626391721027 % obj: ex-onto:municipality. Cardinality: {1}
+   rdf:type  [ex-onto:municipalityVersion]  ?;
+            # 0.2288626391721027 % obj: ex-onto:municipalityVersion. Cardinality: {1}
+   rdf:type  [ex-onto:weatherStation]  ?;
+            # 0.025613987232924285 % obj: ex-onto:weatherStation. Cardinality: {1}
+   ex-onto:neighbourhood  @:Feature  OR  @:physicalLocation  ?
+            // rdfs:comment <http://example.org/location/weatherStation/06238> ;
+            # 0.025613987232924285 % with cardinality {1}
+            # 0.025613987232924285 % obj: @:Feature. Cardinality: {1}
+            # 0.025613987232924285 % obj: @:physicalLocation. Cardinality: {1}
+   time:inXSDDateTimeStamp  xsd:dateTimeStamp  ?
+            // rdfs:comment "2026-03-09T08:26:38Z" ;
+            # 0.025613987232924285 % obj: xsd:dateTimeStamp. Cardinality: {1}
+} // shexer:conformant_example <http://example.org/location/trafficAccidentLocation/HTT06004024210328>
+
+
+:physicalLocation
+{
+   rdf:type  [geosparql:Feature]  ;                            # 100.0 %
+   rdf:type  [ex-onto:physicalLocation]                        # 100.0 %
+} // shexer:conformant_example <http://example.org/location/trafficAccidentLocation/HTT06004024210328>
+
+
+:physicalLocationVersion
+{
+   rdf:type  [geosparql:Feature]  ;                            # 100.0 %
+   rdf:type  [ex-onto:physicalLocationVersion]  ;              # 100.0 %
+   geosparql:hasGeometry  @:Geometry                         # 100.0 %
+            // rdfs:comment <http://example.org/location/trafficAccidentLocation/HTT06004024210328/geometry/2025> ;
+   ex-onto:versionOf  @:Feature  OR  @:physicalLocation
+            // rdfs:comment <http://example.org/location/trafficAccidentLocation/HTT06004024210328> ;
+            # 100.0 % obj: @:Feature. Cardinality: {1}
+            # 100.0 % obj: @:physicalLocation. Cardinality: {1}
+   time:inXSDgYear  xsd:gYear  ?
+            // rdfs:comment "2025" ;
+            # 76.61386023584475 % obj: xsd:gYear. Cardinality: {1}
+   time:inXSDDate  xsd:date  ?
+            // rdfs:comment "2026-06-09" ;
+            # 23.322240940059583 % obj: xsd:date. Cardinality: {1}
+   ex-onto:isLocatedInTown  xsd:string  ?
+            // rdfs:comment "Tilburg" ;
+            # 23.069965063110462 % obj: xsd:string. Cardinality: {1}
+   ex-onto:isLocatedInStreet  xsd:string  ?
+            // rdfs:comment "Lekdijk" ;
+            # 22.6002672132644 % obj: xsd:string. Cardinality: {1}
+   time:inXSDDateTimeStamp  xsd:dateTimeStamp  ?
+            // rdfs:comment "2026-03-09T08:26:38Z" ;
+            # 0.06389882409566568 % obj: xsd:dateTimeStamp. Cardinality: {1}
+} // shexer:conformant_example <http://example.org/location/trafficAccidentLocation/HTT06004024210328/2025>
+
+
+:weatherStation
+{
+   rdf:type  [geosparql:Feature]  ;                            # 100.0 %
+   rdf:type  [ex-onto:weatherStation]  ;                       # 100.0 %
+   ex-onto:neighbourhood  @:Feature  OR  @:physicalLocation
+            // rdfs:comment <http://example.org/location/weatherStation/06238> ;
+            # 100.0 % obj: @:Feature. Cardinality: {1}
+            # 100.0 % obj: @:physicalLocation. Cardinality: {1}
+   ex-onto:ID  xsd:string                                    # 100.0 %
+            // rdfs:comment "06238" ;
+   ex-onto:name  xsd:string                                    # 100.0 %
+            // rdfs:comment "Europlatform" ;
+} // shexer:conformant_example <http://example.org/weatherStation/06238>
+
+
+:neighbourhoodUnit
+{
+   rdf:type  [geosparql:Feature]  ;                            # 100.0 %
+   rdf:type  [ex-onto:neighbourhoodUnit]  ;                    # 100.0 %
+   ex-onto:ID  xsd:string                                     # 100.0 %
+            // rdfs:comment "BU04320203" ;
+   ex-onto:name  xsd:string  ?
+            // rdfs:comment "Medemblik Parkwijk" ;
+            # 91.87576204838606 % obj: xsd:string. Cardinality: {1}
+} // shexer:conformant_example <http://example.org/neighbourhoodUnit/BU04320203>
+
+
+:neighbourhoodUnitVersion
+{
+   rdf:type  [geosparql:Feature]  ;                            # 100.0 %
+   rdf:type  [ex-onto:neighbourhoodUnitVersion]  ;             # 100.0 %
+   time:inXSDgYear  xsd:gYear                                 # 100.0 %
+            // rdfs:comment "2022" ;
+   ex-onto:versionOf  @:Feature  OR  @:neighbourhoodUnit
+            // rdfs:comment <http://example.org/neighbourhoodUnit/BU17081801> ;
+            # 100.0 % obj: @:Feature. Cardinality: {1}
+            # 100.0 % obj: @:neighbourhoodUnit. Cardinality: {1}
+   geosparql:hasGeometry  @:Geometry  ?
+            // rdfs:comment <http://example.org/neighbourhoodUnit/BU17081801/geometry/2022> ;
+            # 49.289083209970045 % obj: @:Geometry. Cardinality: {1}
+   geosparql:sfWithin  @:Feature  OR  @:districtVersion  ?
+            // rdfs:comment <http://example.org/district/WK047301/2022> ;
+            # 49.289083209970045 % with cardinality {1}
+            # 49.289083209970045 % obj: @:Feature. Cardinality: {1}
+            # 49.289083209970045 % obj: @:districtVersion. Cardinality: {1}
+} // shexer:conformant_example <http://example.org/neighbourhoodUnit/BU17081801/2022>
+
+
+:district
+{
+   rdf:type  [geosparql:Feature]  ;                            # 100.0 %
+   rdf:type  [ex-onto:district]  ;                             # 100.0 %
+   ex-onto:ID  xsd:string                                     # 100.0 %
+            // rdfs:comment "WK039211  " ;
+   ex-onto:name  xsd:string  ?
+            // rdfs:comment "Meeden" ;
+            # 49.37906564163217 % obj: xsd:string. Cardinality: {1}
+} // shexer:conformant_example <http://example.org/district/WK039211%20%20>
+
+
+:districtVersion
+{
+   rdf:type  [geosparql:Feature]  ;                            # 100.0 %
+   rdf:type  [ex-onto:districtVersion]  ;                      # 100.0 %
+   time:inXSDgYear  xsd:gYear                                 # 100.0 %
+            // rdfs:comment "2022" ;
+   ex-onto:versionOf  @:Feature  OR  @:district
+            // rdfs:comment <http://example.org/district/WK165505> ;
+            # 100.0 % obj: @:Feature. Cardinality: {1}
+            # 100.0 % obj: @:district. Cardinality: {1}
+   geosparql:hasGeometry  @:Geometry  ?
+            // rdfs:comment <http://example.org/district/WK165505/geometry/2022> ;
+            # 49.37906564163217 % obj: @:Geometry. Cardinality: {1}
+   geosparql:sfWithin  @:Feature  OR  @:municipalityVersion  ?
+            // rdfs:comment <http://example.org/municipality/GM0758/2022> ;
+            # 49.37906564163217 % with cardinality {1}
+            # 49.37906564163217 % obj: @:Feature. Cardinality: {1}
+            # 49.37906564163217 % obj: @:municipalityVersion. Cardinality: {1}
+} // shexer:conformant_example <http://example.org/district/WK165505/2022>
+
+
+:municipality
+{
+   rdf:type  [geosparql:Feature]  ;                            # 100.0 %
+   rdf:type  [ex-onto:municipality]  ;                         # 100.0 %
+   ex-onto:ID  xsd:string                                     # 100.0 %
+            // rdfs:comment "GM0050    " ;
+   ex-onto:name  xsd:string  ?
+            // rdfs:comment "Borne" ;
+            # 50.145348837209305 % obj: xsd:string. Cardinality: {1}
+} // shexer:conformant_example <http://example.org/municipality/GM0050%20%20%20%20>
+
+
+:municipalityVersion
+{
+   rdf:type  [geosparql:Feature]  ;                            # 100.0 %
+   rdf:type  [ex-onto:municipalityVersion]  ;                  # 100.0 %
+   time:inXSDgYear  xsd:gYear                                 # 100.0 %
+            // rdfs:comment "2022" ;
+   ex-onto:versionOf  @:Feature  OR  @:municipality
+            // rdfs:comment <http://example.org/municipality/GM0632> ;
+            # 100.0 % obj: @:Feature. Cardinality: {1}
+            # 100.0 % obj: @:municipality. Cardinality: {1}
+   geosparql:hasGeometry  @:Geometry  ?
+            // rdfs:comment <http://example.org/municipality/GM0632/geometry/2022> ;
+            # 50.145348837209305 % obj: @:Geometry. Cardinality: {1}
+} // shexer:conformant_example <http://example.org/municipality/GM0632/2022>
+
+
+:observationComponent
+{
+   rdf:type  [ex-onto:observationComponent]  ;                 # 100.0 %
+   ex-onto:value  xsd:float                                   # 100.0 %
+            // rdfs:comment "0.005911875" ;
+   ex-onto:code  xsd:string  ?
+            // rdfs:comment "mean" ;
+            # 99.99444537021608 % obj: xsd:string. Cardinality: {1}
+   time:inXSDDateTimeStamp  xsd:dateTimeStamp  ?
+            // rdfs:comment "2026-07-26T10:30:00Z" ;
+            # 0.005554629783924901 % obj: xsd:dateTimeStamp. Cardinality: {1}
+} // shexer:conformant_example <http://example.org/Component_mean/areaProportionBuurt/BU17081801/2022>
+
+
+:Geometry
+{
+   rdf:type  [geosparql:Geometry]  ;                           # 100.0 %
+   geosparql:asWKT  geosparql:wktLiteral  +                   # 100.0 %
+            // rdfs:comment "<http://www.opengis.net/def/crs/EPSG/0/28992> POLYGON ((119107.471 427488.697, ..., 119107.471 427488.697))" ;
+            # 99.98844807046677 % obj: geosparql:wktLiteral. Cardinality: {1}
+            # 0.011551929533229846 % obj: geosparql:wktLiteral. Cardinality: {2}
+   time:inXSDgYear  xsd:gYear  ?
+            // rdfs:comment "2025" ;
+            # 79.6534421140031 % obj: xsd:gYear. Cardinality: {1}
+   time:inXSDDate  xsd:date  ?
+            // rdfs:comment "2026-06-09" ;
+            # 20.290964225118227 % obj: xsd:date. Cardinality: {1}
+   time:inXSDDateTimeStamp  xsd:dateTimeStamp  ?
+            // rdfs:comment "2026-03-09T08:26:38Z" ;
+            # 0.055593660878668634 % obj: xsd:dateTimeStamp. Cardinality: {1}
+} // shexer:conformant_example <http://example.org/location/trafficAccidentLocation/HTT06004024210328/geometry/2025>
+
+
+:publicTransportStop
+{
+   ex-onto:neighbourhood  @:Feature  OR  @:physicalLocation
+            // rdfs:comment <http://example.org/location/publicTransport/NL%3ACHB%3AStopPlace%3A58460070> ;
+            # 100.0 % obj: @:Feature. Cardinality: {1}
+            # 100.0 % obj: @:physicalLocation. Cardinality: {1}
+   ex-onto:typeOfStation  xsd:string                          # 100.0 %
+            // rdfs:comment "onstreetBus" ;
+   rdf:type  [ex-onto:publicTransportStop]  ;                  # 100.0 %
+   ex-onto:ID  xsd:string                                     # 100.0 %
+            // rdfs:comment "NL:CHB:StopPlace:58460070" ;
+   ex-onto:name  xsd:string  ?
+            // rdfs:comment "Dragoonsplein" ;
+            # 98.91830344434955 % obj: xsd:string. Cardinality: {1}
+} // shexer:conformant_example <http://example.org/public_transport_stop/NL%3ACHB%3AStopPlace%3A58460070>
+
+
+:observation
+{
+   ex-onto:neighbourhood  @:Feature  OR  @:physicalLocation  OR  @:neighbourhoodUnitVersion  OR  @:districtVersion  OR  @:municipalityVersion  OR  @:weatherStation
+            // rdfs:comment <http://example.org/location/trafficAccidentLocation/HTT00331390040042> ;
+            # 100.0 % obj: @:Feature. Cardinality: {1}
+            # 77.48595185077812 % obj: @:physicalLocation. Cardinality: {1}
+            # 17.91686456412186 % obj: @:neighbourhoodUnitVersion. Cardinality: {1}
+            # 4.172192374831145 % obj: @:districtVersion. Cardinality: {1}
+            # 0.4243743870319083 % obj: @:municipalityVersion. Cardinality: {1}
+            # 0.000616823236964983 % obj: @:weatherStation. Cardinality: {1}
+   rdf:type  [ex-onto:observation]  ;                          # 100.0 %
+   time:inXSDgYear  xsd:gYear  ?
+            // rdfs:comment "2025" ;
+            # 88.59000376262175 % obj: xsd:gYear. Cardinality: {1}
+   rdf:type  [ex-onto:transportAccident]  ?;
+            # 77.48595185077812 % obj: ex-onto:transportAccident. Cardinality: {1}
+   ex-onto:ID  xsd:string  ?
+            // rdfs:comment "20250000001" ;
+            # 77.48595185077812 % obj: xsd:string. Cardinality: {1}
+   ex-onto:code  xsd:string  ?
+            // rdfs:comment "ratio of areas" ;
+            # 22.51404814922188 % obj: xsd:string. Cardinality: {1}
+   ex-onto:eventType  xsd:string  ?
+            // rdfs:comment "crime" ;
+            # 11.40937941414129 % obj: xsd:string. Cardinality: {1}
+   ex-onto:value  xsd:integer  ?
+            // rdfs:comment "       0" ;
+            # 11.40937941414129 % obj: xsd:integer. Cardinality: {1}
+   time:inXSDgYearMonth  xsd:gYearMonth  ?
+            // rdfs:comment "2026-07" ;
+            # 11.40937941414129 % obj: xsd:gYearMonth. Cardinality: {1}
+   ex-onto:component  @:observationComponent  *
+            // rdfs:comment <http://example.org/Component_mean/areaProportionBuurt/BU17081801/2022> ;
+            # 11.104668735080587 % obj: @:observationComponent. Cardinality: {4}
+   rdfs:label  xsd:string  ?
+            // rdfs:comment "Area proportion of green space (vegetation)" ;
+            # 11.104668735080587 % obj: xsd:string. Cardinality: {1}
+   ex-onto:facilityType  xsd:string  ?
+            // rdfs:comment "vegetation" ;
+            # 11.104051911843623 % obj: xsd:string. Cardinality: {1}
+   time:inXSDDateTimeStamp  xsd:dateTimeStamp  ?
+            // rdfs:comment "2026-07-26T10:30:00Z" ;
+            # 0.000616823236964983 % obj: xsd:dateTimeStamp. Cardinality: {1}
+} // shexer:conformant_example <http://example.org/observation/trafficAccident/20250000001/2025>
+
+
+:transportAccident
+{
+   time:inXSDgYear  xsd:gYear                                 # 100.0 %
+            // rdfs:comment "2025" ;
+   ex-onto:neighbourhood  @:Feature  OR  @:physicalLocation
+            // rdfs:comment <http://example.org/location/trafficAccidentLocation/HTT00331390040042> ;
+            # 100.0 % obj: @:Feature. Cardinality: {1}
+            # 100.0 % obj: @:physicalLocation. Cardinality: {1}
+   rdf:type  [ex-onto:observation]  ;                          # 100.0 %
+   rdf:type  [ex-onto:transportAccident]  ;                    # 100.0 %
+   ex-onto:ID  xsd:string                                      # 100.0 %
+            // rdfs:comment "20250000001" ;
+} // shexer:conformant_example <http://example.org/observation/trafficAccident/20250000001/2025>
+
+

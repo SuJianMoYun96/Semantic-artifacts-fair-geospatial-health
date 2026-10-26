@@ -1,0 +1,150 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ex: <http://example.org/>
+PREFIX : <http://weso.es/shapes/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX graph: <https://biodatafuse.org/example/>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX ex-onto: <http://example.org/ontology#>
+PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX shexer: <http://weso.es/shexer/ontology/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+:Feature
+{
+   rdf:type  [geosparql:Feature]  ;                            # 100.0 %
+   time:inXSDgYear  xsd:gYear  ?
+            // rdfs:comment "2026" ;
+            # 66.320247713279 % obj: xsd:gYear. Cardinality: {1}
+   ex-onto:versionOf  @:Feature  OR  @:neighbourhoodUnit  OR  @:district  OR  @:municipality  ?
+            // rdfs:comment <http://example.org/neighbourhoodUnit/BU03921201> ;
+            # 66.320247713279 % with cardinality {1}
+            # 66.320247713279 % obj: @:Feature. Cardinality: {1}
+            # 52.642630885859695 % obj: @:neighbourhoodUnit. Cardinality: {1}
+            # 12.456845926611383 % obj: @:district. Cardinality: {1}
+            # 1.2207709008079155 % obj: @:municipality. Cardinality: {1}
+   geosparql:sfWithin  @:Feature  OR  @:districtVersion  OR  @:municipalityVersion  ?
+            // rdfs:comment <http://example.org/district/WK167699/2024> ;
+            # 65.09947681247108 % with cardinality {1}
+            # 65.09947681247108 % obj: @:Feature. Cardinality: {1}
+            # 52.642630885859695 % obj: @:districtVersion. Cardinality: {1}
+            # 12.456845926611383 % obj: @:municipalityVersion. Cardinality: {1}
+   rdf:type  [ex-onto:neighbourhoodUnitVersion]  ?;
+            # 52.642630885859695 % obj: ex-onto:neighbourhoodUnitVersion. Cardinality: {1}
+   geosparql:hasGeometry  @:Geometry  ?
+            // rdfs:comment <http://example.org/neighbourhoodUnit/BU03921201/geometry/2024> ;
+            # 52.642630885859695 % obj: @:Geometry. Cardinality: {1}
+   ex-onto:ID  xsd:string  ?
+            // rdfs:comment "WK098832" ;
+            # 33.679752286721005 % obj: xsd:string. Cardinality: {1}
+   ex-onto:name  xsd:string  *
+            // rdfs:comment "Noordpolder Pijnacker" ;
+            # 27.394383742036517 % obj: xsd:string. Cardinality: +
+            # 27.006441968893473 % obj: xsd:string. Cardinality: {1}
+            # 0.3879417731430402 % obj: xsd:string. Cardinality: {2}
+   rdf:type  [ex-onto:neighbourhoodUnit]  ?;
+            # 26.78399829163256 % obj: ex-onto:neighbourhoodUnit. Cardinality: {1}
+   rdf:type  [ex-onto:districtVersion]  ?;
+            # 12.456845926611383 % obj: ex-onto:districtVersion. Cardinality: {1}
+   rdf:type  [ex-onto:district]  ?;
+            # 6.285368544684486 % obj: ex-onto:district. Cardinality: {1}
+   rdf:type  [ex-onto:municipalityVersion]  ?;
+            # 1.2207709008079155 % obj: ex-onto:municipalityVersion. Cardinality: {1}
+   rdf:type  [ex-onto:municipality]  ?
+            # 0.6103854504039578 % obj: ex-onto:municipality. Cardinality: {1}
+} // shexer:conformant_example <http://example.org/neighbourhoodUnit/BU04320203>
+
+
+:neighbourhoodUnit
+{
+   rdf:type  [geosparql:Feature]  ;                            # 100.0 %
+   rdf:type  [ex-onto:neighbourhoodUnit]  ;                    # 100.0 %
+   ex-onto:ID  xsd:string                                     # 100.0 %
+            // rdfs:comment "BU04840207" ;
+   ex-onto:name  xsd:string  +                                 # 100.0 %
+            // rdfs:comment "Noordpolder Pijnacker" ;
+            # 98.55159125639491 % obj: xsd:string. Cardinality: {1}
+            # 1.448408743605076 % obj: xsd:string. Cardinality: {2}
+} // shexer:conformant_example <http://example.org/neighbourhoodUnit/BU04320203>
+
+
+:neighbourhoodUnitVersion
+{
+   geosparql:sfWithin  @:Feature  OR  @:districtVersion
+            // rdfs:comment <http://example.org/district/WK167699/2024> ;
+            # 100.0 % obj: @:Feature. Cardinality: {1}
+            # 100.0 % obj: @:districtVersion. Cardinality: {1}
+   rdf:type  [geosparql:Feature]  ;                            # 100.0 %
+   rdf:type  [ex-onto:neighbourhoodUnitVersion]  ;             # 100.0 %
+   geosparql:hasGeometry  @:Geometry                          # 100.0 %
+            // rdfs:comment <http://example.org/neighbourhoodUnit/BU03921201/geometry/2024> ;
+   time:inXSDgYear  xsd:gYear                                 # 100.0 %
+            // rdfs:comment "2026" ;
+   ex-onto:versionOf  @:Feature  OR  @:neighbourhoodUnit
+            // rdfs:comment <http://example.org/neighbourhoodUnit/BU03921201> ;
+            # 100.0 % obj: @:Feature. Cardinality: {1}
+            # 100.0 % obj: @:neighbourhoodUnit. Cardinality: {1}
+} // shexer:conformant_example <http://example.org/neighbourhoodUnit/BU03921201/2024>
+
+
+:district
+{
+   rdf:type  [geosparql:Feature]  ;                            # 100.0 %
+   rdf:type  [ex-onto:district]  ;                             # 100.0 %
+   ex-onto:ID  xsd:string                                      # 100.0 %
+            // rdfs:comment "WK098832" ;
+} // shexer:conformant_example <http://example.org/district/WK018306>
+
+
+:districtVersion
+{
+   geosparql:sfWithin  @:Feature  OR  @:municipalityVersion
+            // rdfs:comment <http://example.org/municipality/GM1709/2024> ;
+            # 100.0 % obj: @:Feature. Cardinality: {1}
+            # 100.0 % obj: @:municipalityVersion. Cardinality: {1}
+   rdf:type  [geosparql:Feature]  ;                            # 100.0 %
+   rdf:type  [ex-onto:districtVersion]  ;                      # 100.0 %
+   time:inXSDgYear  xsd:gYear                                 # 100.0 %
+            // rdfs:comment "2026" ;
+   ex-onto:versionOf  @:Feature  OR  @:district
+            // rdfs:comment <http://example.org/district/WK169903> ;
+            # 100.0 % obj: @:Feature. Cardinality: {1}
+            # 100.0 % obj: @:district. Cardinality: {1}
+} // shexer:conformant_example <http://example.org/district/WK169903/2024>
+
+
+:municipality
+{
+   rdf:type  [geosparql:Feature]  ;                            # 100.0 %
+   rdf:type  [ex-onto:municipality]  ;                         # 100.0 %
+   ex-onto:ID  xsd:string                                    # 100.0 %
+            // rdfs:comment "GM0448" ;
+   ex-onto:name  xsd:string                                    # 100.0 %
+            // rdfs:comment "Castricum" ;
+} // shexer:conformant_example <http://example.org/municipality/GM0632>
+
+
+:municipalityVersion
+{
+   rdf:type  [geosparql:Feature]  ;                            # 100.0 %
+   rdf:type  [ex-onto:municipalityVersion]  ;                  # 100.0 %
+   time:inXSDgYear  xsd:gYear                                 # 100.0 %
+            // rdfs:comment "2024" ;
+   ex-onto:versionOf  @:Feature  OR  @:municipality
+            // rdfs:comment <http://example.org/municipality/GM0096> ;
+            # 100.0 % obj: @:Feature. Cardinality: {1}
+            # 100.0 % obj: @:municipality. Cardinality: {1}
+} // shexer:conformant_example <http://example.org/municipality/GM0096/2026>
+
+
+:Geometry
+{
+   geosparql:asWKT  geosparql:wktLiteral                      # 100.0 %
+            // rdfs:comment "<http://www.opengis.net/def/crs/EPSG/0/28992> MULTIPOLYGON (((236085.2197 472809.6106, 236108.8009 472825.3313, ... , 236045.7968 472874.8126, 236085.2197 472809.6106)))" ;
+   time:inXSDgYear  xsd:gYear                                 # 100.0 %
+            // rdfs:comment "2024" ;
+   rdf:type  [geosparql:Geometry]                              # 100.0 %
+} // shexer:conformant_example <http://example.org/neighbourhoodUnit/BU03921201/geometry/2024>
+
+
