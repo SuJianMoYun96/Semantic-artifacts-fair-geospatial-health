@@ -1,5 +1,5 @@
 # sssom_version: 1.1
-# mapping_set_id: urn:uuid:8282e1ba-0809-5a9a-b885-df4ee5fbaf2e
+# mapping_set_id: https://github.com/SuJianMoYun96/Semantic-artifacts/blob/main/wikidata-mappings/data-field-wikidata-mapping/contextual_indicators_facility-event-type.sssom.tsv
 # mapping_set_title: Semantic mappings of facility and event types in contextual indicators to Wikidata
 # mapping_set_description: Manually curated mappings from facility, environmental-feature, and event-type concepts used in contextual indicators to Wikidata entities used in proposed FHIR RDF representations.
 # mapping_set_version: 2026-10-04
