@@ -27,7 +27,7 @@ Each top-level directory corresponds to a component of the framework as presente
 | `rdf-schemas-shapes/` | Component 3 — schema documentation | ShEx schemas extracted with sheXer from the RDF-native sources (OpenStreetMap) and from the virtual RDF generated over non-RDF-native sources. |
 | `geosparql-endpoint-tests/` | Component 3 — endpoint selection | Function-by-function GeoSPARQL conformance tests across Ontop, Strabon, QLever, Kadaster, GraphDB and Apache Jena, with the SPARQL queries used and a written results summary. |
 | `unified-graphdb-queries/` | Component 3 — federated access | Query demonstrating unified access through the GraphDB endpoint. |
-| `wikidata-mappings/` | Component 4 — standards-based representation | SSSOM mapping sets aligning geographic-area, measurement, and facility/event-type fields to Wikidata identifiers. |
+| `wikidata-mappings/` | Component 4 — standards-based representation | SSSOM mapping sets aligning geographic-area, and measurement and facility/event-type fields of contextual indicators to Wikidata identifiers. |
 
 Every directory carries its own `README.md` with step-by-step instructions; start there for
 operational detail.
