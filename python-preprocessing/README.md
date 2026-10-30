@@ -588,7 +588,7 @@ For weather observations:
 
 **3: Transformation to WKT:**  
 Yes, from longitude and latitude coordinates to point WKT for both weather-station and weather-observation data.
----
+
 #### Output CSV information
 
 **1: Output file:**  `weather.csv`, `weather_station.csv`
@@ -630,7 +630,7 @@ In the Netherlands, haltetaxi refers to a demand-responsive taxi service that pi
 
 **3: Transformation to WKT:**  
 Yes, from longitude and latitude coordinates to point WKT.
----
+
 #### Output CSV information
 
 **1: Output file:**  `clean_taxi.csv`
