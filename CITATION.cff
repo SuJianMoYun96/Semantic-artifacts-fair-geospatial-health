@@ -1,0 +1,63 @@
+cff-version: 1.2.0
+message: "If you use these artifacts, please cite both the software/data archive and the accompanying article."
+title: "Semantic artifacts for: Making geospatial data FAIR for digital health: a semantic interoperability framework"
+abstract: >-
+  Semantic artifacts accompanying the manuscript. Includes per-source data-preprocessing scripts,
+  Ontop OBDA mappings exposing a virtual RDF layer over PostgreSQL/PostGIS, ShEx schemas extracted
+  with sheXer, GeoSPARQL conformance tests across SPARQL endpoints, and SSSOM mapping sets aligning
+  contextual-indicator and geographic-area fields to Wikidata identifiers.
+type: software
+version: 1.0.0
+date-released: "2026-10-30"
+license: MIT
+license-url: "https://github.com/SuJianMoYun96/Semantic-artifacts/blob/main/LICENSE"
+repository-code: "https://github.com/SuJianMoYun96/Semantic-artifacts"
+keywords:
+  - FAIR principles
+  - geospatial data
+  - digital health
+  - semantic interoperability
+  - RDF
+  - GeoSPARQL
+  - ontology-based data access
+  - Ontop
+  - SSSOM
+  - Wikidata
+authors:
+  - family-names: Yang
+    given-names: Xi
+    affiliation: "Amsterdam UMC, University of Amsterdam, Medical Informatics, Amsterdam, the Netherlands"
+    orcid: "https://orcid.org/XXXX-XXXX-XXXX-XXXX"   # TODO
+  - family-names: "de Groot"
+    given-names: Rowdy
+    affiliation: "Amsterdam UMC, University of Amsterdam, Medical Informatics, Amsterdam, the Netherlands"
+    orcid: "https://orcid.org/XXXX-XXXX-XXXX-XXXX"   # TODO
+  - family-names: "Fernández-Álvarez"
+    given-names: Daniel
+    affiliation: "WESO Research Group, University of Oviedo, Oviedo, Spain"
+    orcid: "https://orcid.org/XXXX-XXXX-XXXX-XXXX"   # TODO
+  - family-names: Cornet
+    given-names: Ronald
+    affiliation: "Amsterdam UMC, University of Amsterdam, Medical Informatics, Amsterdam, the Netherlands"
+    orcid: "https://orcid.org/XXXX-XXXX-XXXX-XXXX"   # TODO
+  - family-names: Waagmeester
+    given-names: Andra
+    affiliation: "Amsterdam UMC, University of Amsterdam, Medical Informatics, Amsterdam, the Netherlands"
+    orcid: "https://orcid.org/XXXX-XXXX-XXXX-XXXX"   # TODO
+preferred-citation:
+  type: article
+  title: "Making geospatial data FAIR for digital health: a semantic interoperability framework"
+  journal: "Scientific Data"
+  year: 2026
+  doi: "10.0000/XXXXXX"   # TODO: replace once accepted
+  authors:
+    - family-names: Yang
+      given-names: Xi
+    - family-names: "de Groot"
+      given-names: Rowdy
+    - family-names: "Fernández-Álvarez"
+      given-names: Daniel
+    - family-names: Cornet
+      given-names: Ronald
+    - family-names: Waagmeester
+      given-names: Andra

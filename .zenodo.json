@@ -1,0 +1,63 @@
+{
+  "title": "Semantic artifacts for: Making geospatial data FAIR for digital health: a semantic interoperability framework",
+  "description": "<p>Semantic artifacts accompanying the manuscript <em>Making geospatial data FAIR for digital health: a semantic interoperability framework</em>. Contains per-source data-preprocessing scripts, Ontop OBDA mappings exposing a virtual RDF layer over PostgreSQL/PostGIS, ShEx schemas extracted with sheXer, function-by-function GeoSPARQL conformance tests across SPARQL endpoints, and SSSOM mapping sets aligning contextual-indicator and geographic-area fields to Wikidata identifiers. Source geospatial data are not redistributed; RDF is generated virtually and not stored.</p>",
+  "upload_type": "software",
+  "license": "mit",
+  "access_right": "open",
+  "language": "eng",
+  "creators": [
+    {
+      "name": "Yang, Xi",
+      "affiliation": "Amsterdam UMC, University of Amsterdam",
+      "orcid": "XXXX-XXXX-XXXX-XXXX"
+    },
+    {
+      "name": "de Groot, Rowdy",
+      "affiliation": "Amsterdam UMC, University of Amsterdam",
+      "orcid": "XXXX-XXXX-XXXX-XXXX"
+    },
+    {
+      "name": "Fernández-Álvarez, Daniel",
+      "affiliation": "University of Oviedo",
+      "orcid": "XXXX-XXXX-XXXX-XXXX"
+    },
+    {
+      "name": "Cornet, Ronald",
+      "affiliation": "Amsterdam UMC, University of Amsterdam",
+      "orcid": "XXXX-XXXX-XXXX-XXXX"
+    },
+    {
+      "name": "Waagmeester, Andra",
+      "affiliation": "Amsterdam UMC, University of Amsterdam",
+      "orcid": "XXXX-XXXX-XXXX-XXXX"
+    }
+  ],
+  "keywords": [
+    "FAIR principles",
+    "geospatial data",
+    "digital health",
+    "semantic interoperability",
+    "RDF",
+    "GeoSPARQL",
+    "ontology-based data access",
+    "Ontop",
+    "SSSOM",
+    "Wikidata",
+    "ShEx"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.0000/XXXXXX",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-article",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "https://github.com/SuJianMoYun96/Semantic-artifacts",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ],
+  "grants": [],
+  "notes": "X.Y. was supported by the China Scholarship Council (CSC; File No. 202208140027)."
+}

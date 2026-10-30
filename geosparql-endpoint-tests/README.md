@@ -50,9 +50,9 @@ For QLever, Kadaster, GraphDB, and Apache Jena, support was assessed using SPARQ
 
 | Test Category | Endpoint(s) | Test / Evidence  | Purpose |
 |---|---|---|---|
-| Simple Features Relation Family | QLever, Kadaster, GraphDB, Apache Jena | [Simple Features Relation Family](./Geometry%20Topology%20Extension/Simple%20Features%20Relation%20Family/) | Contains the SPARQL queries used to test the Simple Features Relation Family. |
-| Common Query Function | QLever, Kadaster, GraphDB, Apache Jena | [SPARQL Query 1](./Common%20Query%20Function/SPARQL%20Query%201%20for%20Common%20Query%20Function.sparql) | Tests whether `geof:relate` can be evaluated directly and return a Boolean result. |
-| Common Query Function | QLever, Kadaster, GraphDB, Apache Jena | [SPARQL Query 2](./Common%20Query%20Function/SPARQL%20Query%202%20for%20Common%20Query%20Function.sparql) | Tests `geof:relate` when used inside a `FILTER`. |
+| Simple Features Relation Family | QLever, Kadaster, GraphDB, Apache Jena | [Simple Features Relation Family](./geometry-topology-extension/simple-features-relation-family/) | Contains the SPARQL queries used to test the Simple Features Relation Family. |
+| Common Query Function | QLever, Kadaster, GraphDB, Apache Jena | [SPARQL Query 1](./geometry-topology-extension/common-query-function/common-query-function-1.sparql) | Tests whether `geof:relate` can be evaluated directly and return a Boolean result. |
+| Common Query Function | QLever, Kadaster, GraphDB, Apache Jena | [SPARQL Query 2](./geometry-topology-extension/common-query-function/common-query-function-2.sparql) | Tests `geof:relate` when used inside a `FILTER`. |
 
 ---
 ### 2. Geometry Extension: Geometry Serializations, and Non-Topological Query Functions
@@ -85,27 +85,27 @@ For QLever, Kadaster, GraphDB, and Apache Jena, query tests were used where appl
 | Function                      | Endpoint(s)                            | Test / Evidence                                                                                                                                                                            |
 |-------------------------------|----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `geo:wktLiteral` `geo:asWKT` `geof:asWKT` | GraphDB, Apache Jena                   | Documentation                                                                                                                                                                              |
-| `geo:wktLiteral` `geo:asWKT` `geof:asWKT` | Kadaster, QLever                             | [Geometry serializations](./Geometry%20Extension/Geometry%20Serializations/Geometry%20Serializations.sparql)                                                                  |
+| `geo:wktLiteral` `geo:asWKT` `geof:asWKT` | Kadaster, QLever                             | [Geometry serializations](./geometry-extension/geometry-serializations/geometry-serialization.sparql)                                                                  |
 | `geof:distance`               | QLever                                 | Documentation and [QLever distance test](https://qlever.dev/osm-planet/KAJ4aX) at 2026-07-21 15:03                                                                                         |
-| `geof:distance`               | Kadaster                               | [Distance Kadaster](./Geometry%20Extension/Non-Topological%20Query%20Functions/Distance/Distance%20Kadaster.sparql)                                                                        |
+| `geof:distance`               | Kadaster                               | [Distance Kadaster](./geometry-extension/non-topological-query-functions/distance/distance-kadaster.sparql)                                                                        |
 | `geof:distance`               | GraphDB                                | Documentation                                                                                                                                                                              |
-| `geof:distance`               | Apache Jena                            | [Distance Apache Jena](./Geometry%20Extension/Non-Topological%20Query%20Functions/Distance/Distance%20Apache%20Jena.sparql)                                                                |
-| `geof:buffer`                 | QLever, Kadaster                       | [Buffer QLever and Kadaster](./Geometry%20Extension/Non-Topological%20Query%20Functions/Buffer/Buffer%20QLever%20and%20Kadaster.sparql)                                                    |
-| `geof:buffer`                 | GraphDB                                | Documentation and [Buffer GraphDB](./Geometry%20Extension/Non-Topological%20Query%20Functions/Buffer/Buffer%20GraphDB.sparql)                                                              |
-| `geof:buffer`                 | Apache Jena                            | [Buffer Apache Jena](./Geometry%20Extension/Non-Topological%20Query%20Functions/Buffer/Buffer%20Apache%20Jena.sparql)                                                                      |
+| `geof:distance`               | Apache Jena                            | [Distance Apache Jena](./geometry-extension/non-topological-query-functions/distance/distance-apache-jena.sparql)                                                                |
+| `geof:buffer`                 | QLever, Kadaster                       | [Buffer QLever and Kadaster](./geometry-extension/non-topological-query-functions/buffer/buffer-qlever-kadaster.sparql)                                                    |
+| `geof:buffer`                 | GraphDB                                | Documentation and [Buffer GraphDB](./geometry-extension/non-topological-query-functions/buffer/buffer-graphdb.sparql)                                                              |
+| `geof:buffer`                 | Apache Jena                            | [Buffer Apache Jena](./geometry-extension/non-topological-query-functions/buffer/buffer-apache-jena.sparql)                                                                      |
 | `geof:centroid`               | QLever                                 | Documentation                                                                                                                                                                              |
-| `geof:centroid`               | Kadaster, GraphDB, Apache Jena         | [Centroid Query](./Geometry%20Extension/Non-Topological%20Query%20Functions/Centroid/Centroid.sparql)                                                                                      |
-| `geof:intersection`           | QLever, Kadaster, GraphDB, Apache Jena | [Intersection Query](./Geometry%20Extension/Non-Topological%20Query%20Functions/Intersection/Intersection.sparql)                                                                          |
+| `geof:centroid`               | Kadaster, GraphDB, Apache Jena         | [Centroid Query](./geometry-extension/non-topological-query-functions/centroid/centroid.sparql)                                                                                      |
+| `geof:intersection`           | QLever, Kadaster, GraphDB, Apache Jena | [Intersection Query](./geometry-extension/non-topological-query-functions/intersection/intersection.sparql)                                                                          |
 | `geof:area`                   | QLever                                 | Documentation                                                                                                                                                                              |
-| `geof:area`                   | Kadaster, Apache Jena                  | [Area Query](./Geometry%20Extension/Non-Topological%20Query%20Functions/Area/Area.sparql)                                                                                                  |
+| `geof:area`                   | Kadaster, Apache Jena                  | [Area Query](./geometry-extension/non-topological-query-functions/area/area.sparql)                                                                                                  |
 | `geof:area`                   | GraphDB                                | Documentation                                                                                                                                                                              |
-| `geof:transform`              | QLever, Kadaster                       | [Transform for QLever and Kadaster](./Geometry%20Extension/Non-Topological%20Query%20Functions/Transform%20for%20QLever%20and%20Kadaster/Transform%20for%20QLever%20and%20Kadaster.sparql) |
+| `geof:transform`              | QLever, Kadaster                       | [Transform for QLever and Kadaster](./geometry-extension/non-topological-query-functions/transform/transform-qlever-kadaster.sparql) |
 | `geof:transform`              | GraphDB                                | Documentation                                                                                                                                                                              |
-| `geof:transform`              | Apache Jena                            | [Transform Apache Jena](./Geometry%20Extension/Non-Topological%20Query%20Functions/Transform%20Apache%20Jena/Transform%20Apache%20Jena.sparql)                                             |
+| `geof:transform`              | Apache Jena                            | [Transform Apache Jena](./geometry-extension/non-topological-query-functions/transform/transform-apache-jena.sparql)                                             |
 
 ---
 ### 3 Results
-![img_1.png](img_1.png)
+![GeoSPARQL function support across the evaluated SPARQL endpoints](geosparql-support-matrix.png)
 
 For Kadaster, GraphDB, and Apache Jena, the eight Simple Features relation functions were evaluated using query tests. The queries executed successfully, so all eight functions were considered supported.
 

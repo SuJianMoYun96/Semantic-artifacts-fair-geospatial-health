@@ -14,11 +14,11 @@ We used [sheXer](https://github.com/weso/shexer) to extract the RDF data schema 
 
 The Python script used for schema extraction is available here:
 
-[`sheX_osm_local.py`](OpenStreetMap/shex_osm_local.py)
+[`sheX_osm_local.py`](openstreetmap/shex_osm_local.py)
 
 The resulting ShEx schema is available here:
 
-[`osm_sample_10000.shex`](OpenStreetMap/osm_sample_10000.shex)
+[`osm_sample_10000.shex`](openstreetmap/osm_sample_10000.shex)
 
 ---
 

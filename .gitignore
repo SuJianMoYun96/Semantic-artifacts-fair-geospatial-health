@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.idea/
+.vscode/
+
+# Local configuration with real credentials — never commit
+*.local.properties
+.env
+
+# Generated intermediate data
+CSVs/
+*.gpkg
+*.tif
+*.nc
+
+# Migration helpers (not part of the repository)
+migrate.sh
+_linkfix.py
