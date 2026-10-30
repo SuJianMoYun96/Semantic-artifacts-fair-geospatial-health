@@ -1,4 +1,4 @@
-# Semantic artifacts
+# Semantic artifacts for fair geospatial health
 
 Semantic artifacts accompanying the manuscript:
 
