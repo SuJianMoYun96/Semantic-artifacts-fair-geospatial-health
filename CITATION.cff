@@ -4,8 +4,8 @@ title: "Semantic artifacts for: Making geospatial data FAIR for digital health: 
 abstract: >-
   Semantic artifacts accompanying the manuscript. Includes per-source data-preprocessing scripts,
   Ontop OBDA mappings exposing a virtual RDF layer over PostgreSQL/PostGIS, ShEx schemas extracted
-  with sheXer, GeoSPARQL conformance tests across SPARQL endpoints, and SSSOM mapping sets aligning
-  contextual-indicator and geographic-area fields to Wikidata identifiers.
+  with sheXer, GeoSPARQL conformance tests across SPARQL endpoints, SSSOM mapping sets aligning
+  contextual-indicator and geographic-area fields to Wikidata identifiers, and one unified SPARQL query in GraphDB. 
 type: software
 version: 1.0.0
 date-released: "2026-10-30"
@@ -27,7 +27,7 @@ authors:
   - family-names: Yang
     given-names: Xi
     affiliation: "Amsterdam UMC, University of Amsterdam, Medical Informatics, Amsterdam, the Netherlands"
-    orcid: "https://orcid.org/XXXX-XXXX-XXXX-XXXX"   # TODO
+    orcid: "https://orcid.org/0009-0007-4874-7831"  
   - family-names: "de Groot"
     given-names: Rowdy
     affiliation: "Amsterdam UMC, University of Amsterdam, Medical Informatics, Amsterdam, the Netherlands"
@@ -35,15 +35,15 @@ authors:
   - family-names: "Fernández-Álvarez"
     given-names: Daniel
     affiliation: "WESO Research Group, University of Oviedo, Oviedo, Spain"
-    orcid: "https://orcid.org/XXXX-XXXX-XXXX-XXXX"   # TODO
+    orcid: "https://orcid.org/0000-0002-8666-7660"   
   - family-names: Cornet
     given-names: Ronald
     affiliation: "Amsterdam UMC, University of Amsterdam, Medical Informatics, Amsterdam, the Netherlands"
-    orcid: "https://orcid.org/XXXX-XXXX-XXXX-XXXX"   # TODO
+    orcid: "https://orcid.org/0000-0002-1704-5980"   
   - family-names: Waagmeester
     given-names: Andra
     affiliation: "Amsterdam UMC, University of Amsterdam, Medical Informatics, Amsterdam, the Netherlands"
-    orcid: "https://orcid.org/XXXX-XXXX-XXXX-XXXX"   # TODO
+    orcid: "https://orcid.org/0000-0001-9773-4008"   
 preferred-citation:
   type: article
   title: "Making geospatial data FAIR for digital health: a semantic interoperability framework"
