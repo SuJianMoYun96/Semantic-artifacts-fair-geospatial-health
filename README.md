@@ -5,7 +5,7 @@ Semantic artifacts accompanying the manuscript:
 > **Making geospatial data FAIR for digital health: a semantic interoperability framework**
 > Xi Yang, Rowdy de Groot, Daniel Fernández-Álvarez, Ronald Cornet, Andra Waagmeester.
 > *Submitted to Scientific Data, collection "10 years of the FAIR principles".*
-> Preprint/DOI: `<ADD WHEN AVAILABLE>`
+> DOI: `<ADD WHEN AVAILABLE>`
 
 Archived release: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
 
