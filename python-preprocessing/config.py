@@ -11,6 +11,7 @@ PROJECT_DIR = Path(__file__).resolve().parent
 
 # Change this path to the folder containing the CSV files
 user_output_dir = os.environ.get("OUTPUT_DIR")
+
 OUTPUT_DIR = (
     Path(user_output_dir).expanduser()
     if user_output_dir
