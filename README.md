@@ -53,6 +53,26 @@ credentials. Substitute local values before running Ontop; do not commit the sub
 Source geospatial data are subject to the licences of their original providers and are not
 redistributed here.
 
+## AI assistance
+
+The research design, data preprocessing scripts, Ontop mappings, ShEx schemas,
+SPARQL queries and SSSOM mapping sets in this repository were produced by the authors.
+
+A generative AI assistant (Claude Opus 5, Anthropic) was used in October 2026 for
+repository engineering only:
+
+- renaming directories and files to kebab-case and rewriting the corresponding
+  markdown link targets;
+- identifying and repairing eight pre-existing broken links in
+  `geosparql-endpoint-tests/README.md`;
+- removing tracked Python bytecode and adding `.gitignore`;
+- drafting this README and the repository metadata files (`LICENSE`,
+  `LICENSE-DATA.md`, `CITATION.cff`, `.zenodo.json`).
+
+All suggested changes were reviewed and applied by the authors, who take full
+responsibility for the content of this repository. No AI tool is listed as an
+author or contributor.
+
 ## Citation
 
 If you use these artifacts, please cite both the manuscript and the archived release. Machine-readable
